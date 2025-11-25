@@ -1,3 +1,5 @@
+"use client";
+
 export default function HomePage() {
   return (
     <>
@@ -17,7 +19,6 @@ export default function HomePage() {
             <a href="#testimoni">Testimoni</a>
           </nav>
           <div>
-            {/* Pakai <a> supaya tidak butuh onClick di Server Component */}
             <a href="/dashboard" className="btn-nav">
               Demo Dashboard
             </a>
@@ -42,7 +43,6 @@ export default function HomePage() {
             </p>
             <div className="hero-actions">
               <button className="btn-main">Mulai di Nadnad Invest</button>
-              {/* Ganti onClick scroll jadi anchor ke #paket */}
               <a href="#paket" className="btn-ghost">
                 Lihat paket simulasi
               </a>
@@ -299,7 +299,6 @@ export default function HomePage() {
             </div>
             <div className="cta-actions">
               <button className="btn-cta-main">Daftar Sekarang</button>
-              {/* Ganti onClick ke link biasa */}
               <a href="/dashboard" className="btn-cta-outline">
                 Lihat Demo Tampilan
               </a>
@@ -316,7 +315,7 @@ export default function HomePage() {
 
       <footer>
         <div className="container footer-inner">
-          <div>© {new Date().getFullYear()} Nadnad Invest. All rights reserved.</div>
+          <div>© 2025 Nadnad Invest. All rights reserved.</div>
           <div className="footer-links">
             <a href="#">Kebijakan Privasi</a>
             <a href="#">Syarat &amp; Ketentuan</a>
