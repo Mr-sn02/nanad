@@ -17,12 +17,10 @@ export default function HomePage() {
             <a href="#testimoni">Testimoni</a>
           </nav>
           <div>
-            <button
-              className="btn-nav"
-              onClick={() => (window.location.href = '/dashboard')}
-            >
+            {/* Pakai <a> supaya tidak butuh onClick di Server Component */}
+            <a href="/dashboard" className="btn-nav">
               Demo Dashboard
-            </button>
+            </a>
             <button className="btn-nav btn-nav-primary">Daftar</button>
           </div>
         </div>
@@ -44,15 +42,10 @@ export default function HomePage() {
             </p>
             <div className="hero-actions">
               <button className="btn-main">Mulai di Nadnad Invest</button>
-              <button
-                className="btn-ghost"
-                onClick={() => {
-                  const el = document.getElementById('paket');
-                  if (el) el.scrollIntoView({ behavior: 'smooth' });
-                }}
-              >
+              {/* Ganti onClick scroll jadi anchor ke #paket */}
+              <a href="#paket" className="btn-ghost">
                 Lihat paket simulasi
-              </button>
+              </a>
             </div>
             <div className="hero-meta">
               <span>
@@ -306,12 +299,10 @@ export default function HomePage() {
             </div>
             <div className="cta-actions">
               <button className="btn-cta-main">Daftar Sekarang</button>
-              <button
-                className="btn-cta-outline"
-                onClick={() => (window.location.href = '/dashboard')}
-              >
+              {/* Ganti onClick ke link biasa */}
+              <a href="/dashboard" className="btn-cta-outline">
                 Lihat Demo Tampilan
-              </button>
+              </a>
             </div>
           </div>
 
